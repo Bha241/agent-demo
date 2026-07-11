@@ -36,9 +36,7 @@ jobs:
         with:
           appSourcePath: ${{ github.workspace }}
           dockerfilePath: Dockerfile
-          registryUrl: aiinvestmentregistry.azurecr.io
-          registryUsername: ${{ secrets.AIINVESTMENTAPP_REGISTRY_USERNAME }}
-          registryPassword: ${{ secrets.AIINVESTMENTAPP_REGISTRY_PASSWORD }}
+          acrName: aiinvestmentregistry
           containerAppName: ai-investment-app
           resourceGroup: InvestmentResearchRG
           imageToBuild: aiinvestmentregistry.azurecr.io/ai-investment-app:${{ github.sha }}
